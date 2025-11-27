@@ -138,7 +138,7 @@ class Testing:
         ("xyz", "yz", 1),
     ]
 
-    def assertSolved(expected, actual):
+    def assert_solved(expected, actual):
         try:
             assert expected == actual, f"Expected result: {expected}\nActual Result: {actual}"
         except AssertionError as err:
@@ -150,12 +150,12 @@ class Testing:
         # Run all test cases using optimal solution
         for haystack, needle, expected in test_cases:
             result = solver.strStr(haystack, needle)
-            assertSolved(expected, result)
+            assert_solved(expected, result)
 
         
         solver = IntuitiveSolution()
         # Run all test cases using intuitive solution
         for haystack, needle, expected in test_cases:
             result = solver.strStr(haystack, needle)
-            assertSolved(expected, result)
+            assert_solved(expected, result)
 

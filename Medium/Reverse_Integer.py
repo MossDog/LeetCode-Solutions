@@ -47,7 +47,7 @@ class Testing:
         (2147483412, 2143847412),
     ]
 
-    def assertSolved(expected, actual):
+    def assert_solved(expected, actual):
         try:
             assert expected == actual, f"Expected result: {expected}\nActual Result: {actual}"
         except AssertionError as err:
@@ -59,5 +59,5 @@ class Testing:
         # Run all test cases using intuitive solution
         for input, expected in test_cases:
             result = solver.reverse(input)
-            assertSolved(expected, result)
+            assert_solved(expected, result)
 
